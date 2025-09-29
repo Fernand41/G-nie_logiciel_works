@@ -1,41 +1,59 @@
-/* HERO SECTION */
+/* RESET ET CORRECTIONS GLOBALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* HERO SECTION - IMAGE LOCALE SEULEMENT */
 .hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-  overflow: hidden;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+    
+      /* Testez ces différents chemins */
+    background-image: url('../assets/image/index.jpg');
+    /* OU */
+    background-image: url('./assets/image/index.jpg');
+    /* OU */
+    background-image: url('assets/image/index.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* Vidéo full screen */
-.hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-/* Overlay sombre */
+/* Overlay sombre pour meilleure lisibilité */
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  max-width: 1200px;
-  animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 1200px;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
+    padding: 0 15px;
 }
 
 .hero h1 {
@@ -44,6 +62,7 @@
     font-weight: 700;
     margin-bottom: 25px;
     color: #f8f9fa;
+    word-wrap: break-word;
 }
 
 .hero p {
@@ -51,18 +70,57 @@
     line-height: 1.8;
     margin-bottom: 30px;
     opacity: 0.95;
+    word-wrap: break-word;
 }
 
 .hero .highlight {
-  color: #ffae00;
+    color: #ffae00;
 }
 
+/* Animation fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
+    .hero {
+        padding: 0 15px;
+        background-attachment: scroll; /* Meilleures performances sur mobile */
+    }
+    
+    .hero-content {
+        padding: 0 10px;
+    }
+    
     .hero h1 {
         font-size: 2.5rem;
+        line-height: 1.3;
     }
+    
     .hero p {
         font-size: 1.1rem;
+        line-height: 1.6;
     }
 }
 
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero {
+        padding: 0 10px;
+    }
+}
