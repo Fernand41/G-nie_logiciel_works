@@ -54,10 +54,10 @@ require 'header.php';
                     <div class="info-section">
                         <h2>Suivez-nous</h2>
                         <div class="social-links-contact">
-                            <a href="https://www.facebook.com/people/Blockchain-BENIN/61563160310976/?mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://x.com/BlockchainBENIN"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/company/blockchain-benin/"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://t.me/blockchainbenin"><i class="fab fa-telegram"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""><i class="fab fa-telegram"></i></a>
                         </div>
                     </div>
                 </div>
